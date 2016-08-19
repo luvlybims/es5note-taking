@@ -1,12 +1,20 @@
 
 var chai = require('chai');
-var assert = chai.assert;
-var myNotes = require('../index');
+var expect = chai.expect;
+var noteBook = require('../index');
+var myNotes = new noteBook('bimbo');
 
-describe ("create functon", function() {
 
+describe ("Testing all functions", function() {
+    
 	it ("should return an error when a number is entered", function(){
-		var myCreate = new NotesApplication(1)
-		assert(create(1)).to.equal('Numbers are not valid input');
+		
+		expect(myNotes.create('hello')).to.equal('success')
+	});
+
+	it ("should return an error when empty note is entered", function(){
+		
+		expect(myNotes.create('')).to.equal('cannot enter empty note')
 	});
 });
+
