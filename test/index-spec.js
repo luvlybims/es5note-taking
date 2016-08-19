@@ -12,9 +12,5 @@ describe ("Testing all functions", function() {
 		expect(myNotes.create('hello')).to.equal('success')
 	});
 
-	it ("should return an error when empty note is entered", function(){
-		
-		expect(myNotes.create('')).to.equal('cannot enter empty note')
-	});
 });
 
