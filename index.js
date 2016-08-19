@@ -26,13 +26,18 @@ this.create = function(note_content)
  {
     	if (typeof  note_content === 'string')
     	{
+            if(note_content === ''){
+                return  ('cannot enter empty note')
+            }
+
         this.notes.push(note_content);
-           
+        return('success') 
     	}
     	else
     	{
     	   console.log('error');
         }
+        
  }
 
 /**
