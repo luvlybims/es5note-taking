@@ -1,15 +1,15 @@
 
 var chai = require('chai');
 var expect = chai.expect;
-var noteBook = require('../index');
-var myNotes = new noteBook('bimbo');
+var notesApp = require('../index');
+var myNotes = new notesApp('bimbo');
 
 
-describe ("Testing all functions", function() {
+describe ("How each function should work", function() {
     
-	it ("should return an error when a number is entered", function(){
-		
-		expect(myNotes.create('hello')).to.equal('success')
+	it ("create function should take string as input", function(){
+		//myNotes.create(note_content);
+		expect(myNotes.create('hello')).toEqual('hello', 'Success');
 	});
 
 });
