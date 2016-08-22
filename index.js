@@ -4,7 +4,8 @@
  * @constructor {Array.<string>} notes list of notes to be processed
  * @param {string} author parameter passed into constructor
  */
-function NotesApplication(author) {      
+//function NotesApplication(author) { 
+var NotesApplication = function (author) {      
         if(typeof author === 'string') {
             this.author = author; 
             this.notes = [];             
@@ -21,10 +22,10 @@ function NotesApplication(author) {
 this.create = function(note_content) {
     	if (typeof  note_content === 'string') {           
         this.notes.push(note_content);
-        console.log('Success');  
+        return 'Success';  
         }
         else {
-           console.log('Note content must be a string');    
+           return 'Note content must be a string';    
         }
 }
 
