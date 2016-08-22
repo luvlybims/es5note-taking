@@ -1,16 +1,18 @@
+var notesApplication = require('../index');
+var expect = require('chai').expect;
+var myNotes = new notesApplication('bimbo');
 
-var chai = require('chai');
-var expect = chai.expect;
-var notesApp = require('../index');
-var myNotes = new notesApp('bimbo');
-
-
-describe ("How each function should work", function() {
+    describe("Adding notes to note taking application", function() {
     
-	it ("create function should take string as input", function(){
-		//myNotes.create(note_content);
-		expect(myNotes.create('hello')).toEqual('hello', 'Success');
-	});
+	   it ("should return error for a number input", function(){
+		//var myNotes.create(note_content); 
+		   expect(myNotes.create(1)).to.equal('Note content must be a string');
+	   });
 
-});
+	   it ("should return success for a string input", function(){
+			expect(myNotes.create('hello')).to.equal('Success');
+	   });
+
+    });
+
 
